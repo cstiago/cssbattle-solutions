@@ -1,0 +1,69 @@
+<div class="box">
+  <div class="upper center">
+    <div class="tip"></div>
+    <div class="curve"></div>
+    <div class="tip"></div>
+  </div>
+  <div class="lower center">
+    <div class="curve"></div>
+    <div class="curve"></div>
+  </div>
+</div>
+<div class="wrapper center">
+  <div class="mask"></div>
+</div>
+
+<style>
+  body, .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F5D6B4;
+  }
+  div {
+    background: #D86F45;
+  }
+  .box {
+    width: 260px;
+    height: 100px;
+  }
+  .upper, .lower {
+    align-items: end;
+    justify-content: space-between;
+  }
+  .upper div {
+    border-radius: 100px 100px 0 0;
+  }
+  .lower div {
+    border-radius: 0 0 100px 100px;
+  }
+  .curve {
+    width: 100px;
+    height: 50px;
+  }
+  .tip {
+    width: 20px;
+    height: 10px;
+  }
+  .wrapper {
+    position: absolute;
+    width: 220px;
+    height: 100px;
+    background: transparent;
+  }
+  .mask, .mask::before, .mask::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #F5D6B4;
+  }
+  .mask::before {
+    position: absolute;
+    left: 0;
+  }
+  .mask::after {
+    position: absolute;
+    right: 0;
+  }
+</style>
